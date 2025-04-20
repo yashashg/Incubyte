@@ -1,2 +1,6 @@
+
 def add(number):
-    return 0
+    if number == "":
+        return 0
+    else:
+        return (int(number))
