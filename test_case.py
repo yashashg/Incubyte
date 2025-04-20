@@ -11,4 +11,6 @@ def test_simple_number():
 
 def test_multiple_number():
     assert add("7,3") == 10
-    
+
+def test_many_number():
+    assert add("7,3,10,6") == 26
