@@ -1,4 +1,5 @@
 from string_calculator import add
+import pytest
 
 def test_empty_string():
     assert add("") == 0 
@@ -20,3 +21,7 @@ def test_newlines_number():
 
 def test_newlines_number():
     assert add("//;\n1;2") == 3
+
+def test_negative_number_raises_exception():
+    with pytest.raises(ValueError, match="negative numbers not allowed -12"):
+        add("10,-12")

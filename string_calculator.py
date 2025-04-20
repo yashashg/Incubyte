@@ -22,8 +22,12 @@ def add(number):
         # Create a regex pattern from all delimiters
         pattern = "|".join(map(re.escape, delimiters))
         spliting = re.split(pattern, number)
-
+        
         for n in spliting:
-            sum = sum + int(n)
+            if(int(n)<=0):
+                raise ValueError(f"negative numbers not allowed {n}")
+            else:
+                sum = sum + int(n)
+
         return(sum)
     
