@@ -2,6 +2,7 @@ import re              #imported library
 
 def add(number):
     sum = 0
+    negatives=[]
 
     #checking if string is empty
     if number == "":                
@@ -22,12 +23,14 @@ def add(number):
         # Create a regex pattern from all delimiters
         pattern = "|".join(map(re.escape, delimiters))
         spliting = re.split(pattern, number)
-        
         for n in spliting:
             if(int(n)<=0):
-                raise ValueError(f"negative numbers not allowed {n}")
+                negatives.append(n)
             else:
                 sum = sum + int(n)
 
+        if negatives:
+            negatives_str = ",".join(map(str, negatives))
+            raise ValueError(f"negative numbers not allowed {negatives_str}")
         return(sum)
     

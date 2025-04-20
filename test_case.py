@@ -25,3 +25,8 @@ def test_newlines_number():
 def test_negative_number_raises_exception():
     with pytest.raises(ValueError, match="negative numbers not allowed -12"):
         add("10,-12")
+
+def test__multiple_negative_number():
+    with pytest.raises(ValueError, match="negative numbers not allowed -12,-5,-10"):
+        add("10,-12,-5,9,-10")
+
