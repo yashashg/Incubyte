@@ -14,3 +14,6 @@ def test_multiple_number():
 
 def test_many_number():
     assert add("7,3,10,6") == 26
+
+def test_newlines_number():
+    assert add("7,3\n4,6") == 20
