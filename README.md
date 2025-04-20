@@ -1,5 +1,5 @@
 # Incubyte
-Incubyte assessment by Yashash Fupta
+Incubyte assessment by Yashash Gupta
 
 # String Calculator
 
