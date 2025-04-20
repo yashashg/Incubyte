@@ -1,6 +1,13 @@
 
 def add(number):
-    if number == "":
+    if number == "":                #Upated the code
         return 0
-    else:
-        return (int(number))
+    
+    if "," in number:
+        spliting = number.split(",")
+
+        for n in spliting:
+            sum = sum + int(n)
+        return(sum)
+    return(int(number))
+    
